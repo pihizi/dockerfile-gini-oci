@@ -9,6 +9,10 @@ ADD oracle-instantclient11.2-basiclite-11.2.0.4.0-1.x86_64.rpm /tmp/oracle.rpm
 RUN apt-get install -y alien libaio1
 RUN alien -i /tmp/oracle.rpm
 
+RUN apt-get install -y telnet
+
+RUN apt-get install -y php5-ldap
+
 EXPOSE 9000
 
 CMD ["/start"]
